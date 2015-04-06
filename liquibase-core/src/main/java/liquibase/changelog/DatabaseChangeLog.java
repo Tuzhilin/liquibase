@@ -255,7 +255,8 @@ public class DatabaseChangeLog implements Comparable<DatabaseChangeLog>, Conditi
             IncludeAllFilter resourceFilter = null;
             if (resourceFilterDef != null) {
                 try {
-                    resourceFilter = (IncludeAllFilter) Class.forName(resourceFilterDef).newInstance();
+                  resourceFilter = (IncludeAllFilter) Class.forName(resourceFilterDef, true,
+                      resourceAccessor.toClassLoader()).newInstance();
                 } catch (Exception e) {
                     throw new SetupException(e);
                 }
