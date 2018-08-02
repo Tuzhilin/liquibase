@@ -79,7 +79,7 @@ public class OracleDatabase extends AbstractJdbcDatabase {
                 //can not get keywords. Continue on
             }
         }
-        reservedWords.addAll(Arrays.asList("GROUP", "USER", "SESSION","PASSWORD", "RESOURCE", "START", "SIZE", "UID", "DESC")); //more reserved words not returned by driver
+        reservedWords.addAll(Arrays.asList("GROUP", "USER", "SESSION", /*"PASSWORD",*/ "RESOURCE", "START", "SIZE", "UID", "DESC", "ORDER")); //more reserved words not returned by driver, TSW: PASSWORD brokes QDP-core
         super.setConnection(conn);
     }
 
