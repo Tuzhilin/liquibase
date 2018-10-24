@@ -288,8 +288,8 @@
                         </execution>
                     </executions>
                     <configuration>
-                        <serverId>sonatype-nexus-staging</serverId>
-                        <nexusUrl>https://oss.sonatype.org/service/local/staging/deploy/maven2/</nexusUrl>
+                        <serverId>BFT_REL</serverId>
+                        <nexusUrl>http://jin-server.bft.local:8097/nexus/content/repositories/BFT_REL</nexusUrl>
                     </configuration>
                 </plugin>
 
@@ -366,9 +366,9 @@
 
     <distributionManagement>
         <repository>
-            <id>sonatype-nexus-staging</id>
-            <name>Sonatype Production Repository</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+            <id>BFT_REL</id>
+            <name>BFT Production Repository</name>
+            <url>http://jin-server.bft.local:8097/nexus/content/repositories/BFT_REL</url>
         </repository>
         <snapshotRepository>
             <id>sonatype-nexus-snapshots</id>
